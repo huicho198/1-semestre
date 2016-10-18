@@ -1,0 +1,350 @@
+%author Luis Alberto Martinez Monroy
+%Materia Estructuras Discretas 2017-1
+%Numero de cuenta: 314212391
+%Practica de Laboratorio #2
+%Profesora: Laura Freidberg Gojman
+%Ayudante de laboratorio: Albert Manuel Orozco Camacho
+%Facultad de ciencias
+
+\documentclass{report}%tipo de documento.
+\textheight=25cm % delimitado el alto del area de impresion
+\textwidth=15cm % delimitado lo ancho del area de imprecion
+\topmargin=-3cm % delimita el margen superior
+
+
+\usepackage[spanish]{babel}% paquete para lengua en español
+\usepackage[utf8]{inputenc}%paquete para poner acentos, etc.
+\usepackage{graphicx} %Paquete para incluir graficos
+\usepackage[T1]{fontenc}%tipo de letra
+% paquete para cabezera y pie de pagina.
+\usepackage{lastpage}%Hace referencia al numero de paginas
+\usepackage{ifthen}
+\usepackage{amsmath,amsfonts,amsthm,amssymb} %paquetes matematicos
+\usepackage{sfmath} % paquetes matematicos
+\usepackage{anyfontsize} %paquete para tamaño de texto
+\usepackage{hyperref} %Paquete para hipervinculo
+
+
+\begin{document} % inicia el contenido de mi documento
+\parindent=0mm:
+
+\thispagestyle{plain}%tipo de la hoja
+               \titlehead% Esto es para poner algunos datos como la escuela, prof, etc.
+                   {
+                     Materia: Estructuras Discretas 2017-1\\
+                     Profesora: Laura Freudberg Gojman\\
+                     Universidad Nacional Autonoma De México\hfill
+                     Facultad de ciencias\\
+                     Alumno: Luis Alberto Martinez Monroy
+                   }
+
+
+\begin{center}% No funciono \title y \subtitle asi que esta es la representacion de mi titulo y mi subtitulo buscando alternativas.
+
+{\Huge Practica \#2 Estructuras Discretas\\}\\% Este es el Titulo
+{\Large Herramientas para el uso de modo matematico}\\\\% Este es el subtitulo
+\hrule\\%Esta es la linea que aparece despues del subtitulo
+
+\end{center}
+\vspace{.3cm} %espaciado vertical 
+\begin{center}%Para centrar mi nombre y la fecha despues del espaciado
+Alumno: Luis Alberto Martinez Monroy\\\\% Nombre de alumno
+N Cuenta: 314212391\\\\%Numero de cuenta
+
+\begin{tabular}{cc}%fecha de entrega, pero lo puse como en tabla para que se viera muy bonito y sin lineas
+                       \textsc{Fecha de entrega:}& \textsc{12 de septiembre 2016}\\
+                   \end{tabular}
+
+\end{center}% termina el centrado de nombre y fecha
+\Seccion{{\Large Actividades}}\\%formato titulo de secciones
+\subseccion{{\large1.-Formalice el siguiente argumento}}\\
+{\small \it Si un unicornio es mítico también es inmortal, pero si no lo es, entonces es un
+mamífero mortal. Si un unicornio es inmortal o mamífero tiene cuerno. Un unicornio
+es mágico si tiene un cuerno. Luego entonces simpre un unicornio es mágico y tiene
+cuerno.}\\
+{\small 
+p = un unicornio es mítico\\
+q = es inmortal\\
+r = es un mamífero mortal\\
+s = tiene cuerno\\
+t = un unicornio es magico\\
+
+$((p \wedge q)\wedge \neg q) \rightarrow r$\\
+$(q \vee r)\rightarrow s$\\
+$t \rightarrow s$\\
+$\therefore t \wedge s$\\
+
+}\\
+
+\subseccion{{\large2.-Probar que el argumento anterior es valido usando interpretaciones}}\\
+{\small
+Metodo directo
+$\Gamma = \{((p \wedge q)\wedge \neg q) \rightarrow r, (q \vee r)\rightarrow s,t \rightarrow s \} \models t\wedge s$
+
+Modelo 1: I(p)=1, I(q)=1, I(r)=1, I(s)=1, I(t)=1.\\
+Modelo 2: I(p)=1, I(q)=1, I(r)=1, I(s)=1, I(t)=0.\\
+Modelo 3: I(p)=1, I(q)=1, I(r)=0, I(s)=1, I(t)=1.\\
+Modelo 4: I(p)=1, I(q)=1, I(r)=0, I(s)=1, I(t)=0.\\
+Modelo 5: I(p)=1, I(q)=0, I(r)=1, I(s)=1, I(t)=1.\\
+Modelo 6: I(p)=1, I(q)=0, I(r)=1, I(s)=1, I(t)=0.\\
+Modelo 7: I(p)=1, I(q)=0, I(r)=0, I(s)=1, I(t)=1.\\
+Modelo 8: I(p)=1, I(q)=0, I(r)=0, I(s)=1, I(t)=0.\\
+Modelo 9: I(p)=1, I(q)=0, I(r)=0, I(s)=0, I(t)=0.\\
+Modelo 10: I(p)=0, I(q)=1, I(r)=1, I(s)=1, I(t)=1.\\
+Modelo 11: I(p)=0, I(q)=1, I(r)=1, I(s)=1, I(t)=0.\\
+Modelo 12: I(p)=0, I(q)=1, I(r)=0, I(s)=1, I(t)=1.\\
+Modelo 13: I(p)=0, I(q)=1, I(r)=0, I(s)=1, I(t)=0.\\
+Modelo 14: I(p)=0, I(q)=0, I(r)=1, I(s)=1, I(t)=1.\\
+Modelo 15: I(p)=0, I(q)=0, I(r)=1, I(s)=1, I(t)=0.\\
+Modelo 16: I(p)=0, I(q)=0, I(r)=0, I(s)=1, I(t)=1.\\
+Modelo 17: I(p)=0, I(q)=0, I(r)=0, I(s)=1, I(t)=0.\\
+Modelo 18: I(p)=0, I(q)=0, I(r)=0, I(s)=0, I(t)=0.\\
+
+El argumento no se satisface debido a que en varios de los modelos, la conclucion no es una consecuencia logica de las premisas.
+
+}\\
+
+\newpage
+\parindent=0mm:
+\thispagestyle{plain}
+
+\subseccion{{\large3.- Decida si la siguiente equivalencia logica es valida o no, demostrandola a tráves las leyes ya vistas y justificando cada paso}}\\
+
+{\small 
+
+$$
+(p\wedge (q\rightarrow r))\rightarrow r\wedge (p\vee s) \equiv \neg p \vee (p\wedge \neg r)\vee (r\wedge p) \vee (r\wedge s)
+$$\\
+
+$\neg p \vee (p\wedge \neg r)\vee (r\wedge p) \vee (r\wedge s) \equiv \neg p \vee (q\wedge \neg r) \vee (r\wedge (p\vee s))$ (Por Distributividad)\\
+$\equiv \neg p \vee (\neg \neg q\wedge \neg r) \vee (r\wedge (p\vee s))$ (Por Doble Negacion)\\
+$\equiv \neg p \vee \neg (\neg p\vee r) \vee (r\wedge (p\vee s))$ (Por Leyes de morgan)\\
+$\equiv \neg (p \wedge (\neg p\vee r)) \vee (r\wedge (p\vee s))$ (Por Leyes de morgan)\\
+$\equiv \neg (p \wedge (p\rightarrow r)) \vee (r\wedge (p\vee s))$ (Por Eliminacion de operadores)\\
+$\equiv (p \wedge (p\rightarrow r)) \rightarrow (r\wedge (p\vee s))$ (Por Eliminacion de operadores)\\
+
+
+}\\
+
+\subseccion{{\large4.- Resuelva las siguientes ecuaciones y desigualdades, indicando paso por paso
+las acciones que va realizando.Escoja una ecuación de las siguientes y explique el procedimiento
+dentro de un párrafo. (Si alguna de las siguientes, no tiene solución real, especifique
+las soluciones complejas.)}}\\
+{\small
+a)$36x^2-80x+23=17x-6$\\
+$36x^2-80x+23-17x+6=0$\\
+$36x^2-97x+29=0$\\
+$x=\frac{b \pm \sqrt{b^(2)-4ac}}{2a}$\\
+$a=36$\\
+$b=-97$\\
+$c=29$\\
+$x=\frac{-27 \pm \sqrt{-27^(2)-4(36)(29)}}{2a}$\\
+$x=\frac{-27 \pm \sqrt{729-4(1044)}}{2(36)}$\\
+$x=\frac{-27 \pm \sqrt{729-4176}}{72}$\\
+$x=\frac{-27 \pm \sqrt{-3447}}{72}$\\
+$x_{1}=\frac{-27 - \sqrt{-3447}}{72}$\\
+$x_{2}=\frac{-27 + \sqrt{-3447}}{72}$\\
+{\small Tenemos la expresion $36x^2-80x+23=17x-6$, por lo que procederemos a pasar todos los terminos del extremo derecho al extremo izquierdo e igualar a 0, por lo que nos quedara la formula $36x^2-80x+23-17x+6=0$; ya llegando a esto empezamos a agrupar terminos de tal manera que nos quedara la formula $36x^2-97x+29=0$, usando la formula general $x=\frac{b \pm \sqrt{b^(2)-4ac}}{2a}$, podemos resolver la ecuacion $36x^2-97x+29=0$, donde $a= 36 b=-97 c=29$, asi podemos sustituir en la formula general y nos quedaria $x=\frac{-27 \pm \sqrt{-27^(2)-4(36)(29)}}{2a}$, simplificamos y nos que asi $x=\frac{-27 \pm \sqrt{729-4(1044)}}{2(36)}$, simplificamos un poco mas $x=\frac{-27 \pm \sqrt{729-4176}}{72}$.\\
+Resolvemos la ecuacion, pero esta no es real, sin embargo la solucion en x son:\\ $x_{1}=\frac{-27 - \sqrt{-3447}}{72}$  y $x_{2}=\frac{-27 + \sqrt{-3447}}{72}$\ } \\
+
+b)$\left\{
+    {{
+      3x + 2x - 10 = 8y
+      \atop
+      9x + 3 = -24y + 5 - z
+   } }\atop
+      10z - 2x + 3 = 0
+    \right.$\\
+{\small
+$3x+2x-10 = 8y$\\
+$5x-10= 8y$\\
+$5x= 8y+10$\\
+$x=\frac{8y+10}{5}$\\
+
+$9\frac{8y+10}{5}+3=-24y+5-z$\\
+$10z - 2\frac{8y+10}{5}+3=0$\\
+$10z - \frac{2(8y+10)}{5}+3=0$\\
+multiplicamos por 5\\
+$50z-2(8y+10)+15=0 $\\
+$50z-16y-20+15=0 $\\
+$50z-16y-5=0$\\
+$50z=16y+5$\\
+$z=\frac{16y+5}{50}$\\
+$9\frac{8y+10}{5}+3=-24y+5-\frac{16y+5}{50} $\\
+multiplicamos por 50\\
+$90(8y+10)+150=-1200y+250-(16y+5)$\\
+$720y+900+150=-1216y+245$\\
+$720y+1050=-1216y+245$\\
+$720y+1216y=245-1050$\\
+$1936y=-805$\\
+$y=\frac{-805}{1936}$\\
+$z=\frac{16y+5}{50}$ = $\frac{16\frac{-805}{1936}+5}{50}$=$\frac{-4}{121}$\\
+$x=\frac{8y+10}{5}$=$\frac{8\frac{-805}{1936}+10}{5}$=$\frac{328}{242}$\\
+Concluimos en que:\\
+$y=\frac{-805}{1936}$, $z=\frac{-4}{121}$, $x=\frac{328}{242}$\\
+}\\
+
+\subseccion{{\large5.- Escriba el sistema de ecuaciones del inciso anterior en forma matricial AX=B)}}
+{\small
+\begin{align}
+A
+\begin{pmatrix}%esta es la parte de A
+  {5} && {-8} && {0}\\
+   {9} && {24} && {1}\\
+    {-2} && {0} && {10}\\
+\end{pmatrix}  
+X
+\begin{pmatrix}%esta es la parte de X
+  {x}\\
+    {y}\\
+   {z}\\
+\end{pmatrix}
+= B
+\begin{pmatrix}%esta es la parte de B
+  {10}\\
+    {2}\\
+    {3}\\
+\end{pmatrix}
+\end{align}
+}\\
+\subseccion{\large{6.-Defina formalmente el concepto de limite, formalmente con $\in y \delta$}}\\
+{\small  
+$ \displaystyle{\lim_{x\rightarrow c} = L}$\\
+$\forall \in \textgreater 0, \delta\textgreater 0,   \rightarrow  f(x)  \dagger si:\\
+ 0 \textless |x-c| \textless \delta \rightarrow |f(x)- L|\textless \epsilon $} \\
+\subseccion{\large{7.-Calcule lo siguiente, justificando paso por paso:}}\\
+{\small
+a)
+$\displaystyle{\lim_{ x \rightarrow -2}} f(x)= \displaystyle \frac{3x^2-8x-3}{2x^2 -18}$ $=\displaystyle{\frac{5}{2}}$\\
+
+$\displaystyle{\lim_{ x \rightarrow -2}} f(x)= \displaystyle \frac{38(-2)^2-8(-2)-3}{ 28(-2)^2 -18}$\\
+
+$\displaystyle{\lim_{ x \rightarrow -2}} f(x)= \displaystyle \frac{3(4)-8(-2)-3}{ 2(-2) -18}$\\
+
+$\displaystyle{\lim_{ x \rightarrow -2}} f(x)= \displaystyle \frac{12+13}{8 -18} $\\
+
+$\displaystyle{\lim_{ x \rightarrow -2}} f(x)= \displaystyle \frac{5}{2} $\\
+
+$=\displaystyle{\frac{5}{2}}$\\
+
+
+b)$\frac{d}{dx} \left[ \frac{5x^2 - \ln (\cos x)}{8x^3 - 10x} \right]$ $=\frac{\frac{d}{dx}\left(5x^2-\ln \left(\cos \left(x\right)\right)\right)\left(8x^3-10x\right)-\frac{d}{dx}\left(8x^3-10x\right)\left(5x^2-\ln \left(\cos \left(x\right)\right)\right)}{\left(8x^3-10x\right)^2}$\\
+
+$\frac{d}{dx}\left(5x^2-\ln \left(\cos \left(x\right)\right)\right)=10x+\frac{\sin \left(x\right)}{\cos \left(x\right)}$\\
+
+$\frac{d}{dx}\left(5x^2-\ln \left(\cos \left(x\right)\right)\right)$\\
+
+$=\frac{d}{dx}\left(5x^2\right)-\frac{d}{dx}\left(\ln \left(\cos \left(x\right)\right)\right)$\\
+
+$\frac{d}{dx}\left(5x^2\right)=10x$\\
+
+$\frac{d}{dx}\left(5x^2\right)$\
+
+$=5\frac{d}{dx}\left(x^2\right)$
+
+$=5\cdot \:2x^{2-1}$\\
+
+$=10x$\\
+
+$\frac{d}{dx}\left(\ln \left(\cos \left(x\right)\right)\right)=-\frac{\sin \left(x\right)}{\cos \left(x\right)}$\\
+
+$=10x-\left(-\frac{\sin \left(x\right)}{\cos \left(x\right)}\right)$\\
+
+
+$=10x+\frac{\sin \left(x\right)}{\cos \left(x\right)}$\\
+
+
+$\frac{d}{dx}\left(8x^3-10x\right)=24x^2-10$\\
+
+$=\frac{\left(10x\;+\;\frac{\sin\left(x\right)}{\cos\left(x\right)}\right)\left(8x^3-10x\right)-\left(24x^2-10\right)\left(5x^2-\ln\left(\cos\left(x\right)\right)\right)}{\left(8x^3-10\right)^2}$\\
+
+c)$\displaystyle{\int_0^{1}}$ $(x^6-2x^3+5x-3)dx$ $ \displaystyle{=\frac{-6}{7} }$\\
+$\displaystyle{\int_0^{1}}$
+$\displaystyle{\frac{X^n1}{n+1}} dx$\\
+Aplicamos la propiedad a la formula:\\
+$(x^6-2x^3+5x-3)dx$ \\
+
+$ \displaystyl{ \frac{X^7}{7} }$ -
+$ \displaystyle{ \frac{6X^3}{4} }$ -
+$ \displaystyle{ \frac{5X^2}{2} }$ -
+$ \displaystyle{ \frac{3X^1}{1} }$ +
+\\
+
+
+
+$ \displaystyle{ \frac{1^7}{7} }$ -
+$ \displaystyle{ \frac{6(1)^3}{4} }$ -
+$ \displaystyle{ \frac{5(1)^2}{2} }$ -
+$ \displaystyle{\frac{3(1)^1}{1} }$ 
+\\
+
+$ \displaystyle{=\frac{-6}{7} }$ 
+}\\
+\subseccion{\large{8.- Enuncie los axiomas de Peano}}\\
+{\small
+
+Se define el conjunto N de los numeros naturales como un conjunto que verifica las 
+cinco condiciones siguiente
+
+Existe un elemento de N al que llamaremos cero $(0)$, esto es\\ 
+Exise  la llammada apliación siguiente
+
+$ \emptyset:N\rightarrow N, \forall, n ,\epsilon ,\emptyset (n) \epsilon N  $\\
+
+El cero no es imagen por la aplicacion siguiente:\\
+ $ \forall n \epsilon N \emptyset (n) \neq 0  $\\
+ 
+La aplicacion siguiente es Inyectiva:\\
+
+$n,m \epsilon N*N= \emptyset (m) \rightarrow n=m  $
+
+Se verifica la induccion completa:
+
+${0 \epsilon A \brace \forall \epsilon A \rightarrow \emptyset (n) \epsilon A} \Rightarrow
+ A = N$
+}\\
+
+\subseccion{\large{9.-Enuncie la paradoja de Russell}}\\
+{\small
+La paradoja de Russell plantea lo siguiente: 
+\begin{center}
+{\it \bf \noindent El conjunto de conjuntos que no forman parte de sì mismos, ¿es singular o no es singular?} 
+\end{center}\\
+
+Por consiguiente, se le llama {\em conjunto singular} a todo conjunto que se contiene a sí mismo.  Por ejemplo, un conjunto de ideas es otra idea mayor, pero idea fin y al cabo, y por ello está contenida dentro del conjutno de ideas.\\ 
+
+Se llama {\em conjunto no singular} a todo conjunto que no se contiene a sí mismo. Por ejemplo, un conjunto de letras no es una letra, en todo caso, sería una palabra y pertenecería al conjunto de las palabras.\\
+Veamos, si el conjunto no forma parte de sí mismo, cumpliría la condición y habría que meterlo en el conjunto de conjuntos que no forma parte de sí mismos... pero entonces formaría parte de sí mismo, por lo que no habría que incluirlo... pero entonces habría que incluirlo, ya que no forma parte de sí mismo...\\
+En conclusion, el conjunto formará parte de sí mismo sólo si no forma parte de sí mismo. 
+}\\
+
+\subseccion{\large{10.-Enuncie y demuestre la siguiente proposición (para cualquier conjunto A)}}\\
+{\small
+$$ A \cap A^{c} = \emptyset  $$
+Definimos a $A$ como un conjunto, donde  $A=\{a|a \in A\}$\\
+Sabemos que el complemento de un conjunto, es todo lo que no esta contenido dentro de si mismo por lo que definiremos a $A^c$ como $A^c=\{a|a \not \in A \}$\\
+Por la definicion de interseccion $A\cap B$, sabemos que $A\cap B=\{a|a\in A \wedge a\in B\}$\\
+Por lo que tenemos que la interseccion de $A\cap A^c$ es $A\cap A^c=\{a|a \in A \wedge a\in A^c\}$\\
+Pero sabemos que $\forall a \in A^c, a\not \in A$\\
+Por lo que podemos concluir que el conjunto $A\cap A^c = \emptyset$\\
+}\\
+
+\subseccion{\large{11.-Enuncie una de las propiedades distributivas para cualesquiera tres conjuntos y demuéstrela}}\\
+{\small
+Tenemos la propiedad distributiva: $ A \cap ( B \cup C ) = ( A \cap B) \cup (A \cap C) $  \\
+Sabemos por propiedad de $A\cap B$ que $(A \cap B)=\{a|a \in A \wedge a\in B}$\\
+ Por lo que podemos decir que $(A \cap B)=\{a|a \in A \wedge a\in B}$ y que $(A \cap C)=\{a|a \in A \wedge a\in C}$, por lo que podemos decir que:\\
+ $( A \cap B) \cup (A \cap C) $=$(A \cap B)=\{a|a \in A \wedge a\in B}$ y que $(A \cap C)=\{a|a \in A \wedge a\in C}$\\
+ Por consiguiente podemos decir que $A$ tiene interseccion con el conjunto $B y C$ por lo que podemos reducir la expresion a que $( A \cap B) \cup (A \cap C) $=$a\in A \cup(a\in B \vee a\in C)$
+ Usando la propiedad de union de conjunto sabes que $A\cup B=\{a|a\in A \vee a\in C\}$\\
+ Podemos reducir la la exprecion a $A\cap(B\cup C)$\\
+ Luego entonces podemos concluir que $( A \cap B) \cup (A \cap C) = A \cap ( B \cup C )$
+
+}\\
+
+\begin{thebibliography}{10}% esta es la parte de la bibliografia
+\bibitem{}{López Mateos, Manuel (1978). Los Conjuntos. México D.F.: Publicaciones del Departamento de Matemáticas, Facultad de Ciencias, UNAM.\\
+
+
+\end{thebibliography}% termina el formato de bibliografia
+\end{document}%termina todo el contenido de mi documento.

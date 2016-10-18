@@ -1,0 +1,114 @@
+\documentclass[paper=letter, fontsize=12pt]{scrartcl}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\usepackage{hyperref}
+\usepackage{amsfonts,amsthm}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{sectsty}
+
+
+\allsectionsfont{\raggedright\large \textit\normalfont\scshape\emph}
+
+\title{Lineamientos de entrega de prácticas de laboratorio}
+
+\subtitle{
+  Estructuras Discretas, 2017-1\\
+  Facultad de Ciencias, UNAM
+}
+
+\author{
+  \normalsize
+  Laura Freidberg Gojman\\
+  \normalsize
+  \texttt{\href{mailto:lfreidberg@yahoo.com}{lfreidberg@yahoo.com}}
+  \and
+  \normalsize
+  José Ricardo Rodríguez Abreu\\
+  \normalsize
+  \texttt{\href{mailto:ricardo_rodab@ciencias.unam.mx}{ricardo\_rodab@ciencias.unam.mx}}
+  \and
+  \normalsize
+  Albert Manuel Orozco Camacho\\
+  \normalsize
+  \texttt{\href{mailto:alorozco53@ciencias.unam.mx}{alorozco53@ciencias.unam.mx}}
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Lineamientos generales}
+
+\begin{itemize}
+\item Todas las prácticas se entregarán de manera \emph{individual} a menos que se permita lo contrario.
+\item Cualquier sospecha de copia en el código fuente de la práctica será motivo de anulación de la\
+  misma para \textbf{TODOS} los que entreguen algo \emph{demasiado} similar.
+\item Queda prohibido copiar y pegar texto de tamaño \emph{considerable} de Internet. Si se pide un\
+  resumen o paráfrasis de algún tema, es preferible que se haga así con las palabras de cada\
+  estudiante a copiar explícitamente algo (especialmente si se detecta el uso de una fuente no\
+  fidedigna). En este caso, se procederá a bajar \textbf{2} puntos por cada copia de Internet.
+\item El alumno puede hacer citas textuales de tamaño pequeño, siempre y cuando incluya la\
+  referencia bibliográfica de dichas citas. La ausencia de lo anterior será penalizado con\
+  \textbf{1} punto menos.
+\item Para las prácticas de \LaTeX:
+  \begin{itemize}
+  \item El alumno deberá de usar \emph{su propio} formato de entrega de prácticas que elaborará\
+    durante la primera, a menos que se indique lo contrario.
+  \item El alumno deberá \textbf{documentar} todas las funcionalidades pedidas en cada práctica.\
+    En cada comentario, deberá de explicar brevemente qué hace el bloque de código escrito.\
+    (Un buen ejemplo de este punto es observar el código fuente de este documento.)
+  \item El código fuente \texttt{*.tex} deberá de de estar dentro de una carpeta llamada\
+    \texttt{tex/}.
+  \item Queda prohibido el uso de \emph{plantillas} (templates) para mejorar la presentación
+    de la práctica.
+  \item El alumno deberá de incluir todos los gráficos e imágenes que desee usar dentro de un\
+    directorio llamado \texttt{img/}.
+  \item Se debe de entregar un comprimido en el cual se incluyan sólo archivos \texttt{.tex},\
+    excluyendo \texttt{.pdf} y los autogenerados por el compilador. Además de imágenes, en caso
+    de existir.
+  \item En general, la estructura de entrega es la siguiente:\\
+    \texttt{
+      practicaNN/ - |\\
+      \hspace*{2.82 cm} | - tex/ - *.tex\\
+      \hspace*{2.82 cm} |\\
+      \hspace*{2.82 cm} | - img/ - *.(jpg | png | gif | $\ldots$)
+    }\\
+    donde $NN$ es el número de la práctica.
+  \end{itemize}
+\item Para las prácticas en Haskell:
+  \begin{itemize}
+  \item El código deberá de estar bien comentado, inclyendo un comentario por cada función,\
+    tipo de dato y constante definida.
+  \item El alumno debe de incluir un archivo \texttt{README.tex}, hecho en \LaTeX, con el fin\
+    de explicar todas las funcionalidades del programa entregado, así como dificultades al
+    programar.
+  \item En general, la estructura de entrega es la siguiente:\\
+    \texttt{
+      practicaNN/ - |\\
+      \hspace*{2.82 cm} | - tex/ - README.tex\\
+      \hspace*{2.82 cm} |\\
+      \hspace*{2.82 cm} | - bin/ - *.hs
+    }\\
+    donde $NN$ es el número de la práctica.
+  \end{itemize}
+\item La entrega de las prácticas es exclusivamente vía electrónica, enviando un correo a\
+  \texttt{\href{mailto:alorozco53@ciencias.unam.mx}{alorozco53@ciencias.unam.mx}} con\
+  asunto \texttt{[Est Disc 2017-1] Práctica NN}.
+\item El alumno tiene hasta las $23:59$ (UTC-6, UTC-5 en horario de verano) del día de entrega\
+  de la práctica para que le sea aceptada. Posteriormente, el alumno puede entregar de manera\
+  tardía con la siguiente penalización:
+  \begin{itemize}
+  \item $-2$ puntos por $1$ día de retraso
+  \item $-3$ puntos por $2$ días de retraso
+  \item $-4$ puntos por $3$ días de retraso
+  \item \textbf{NO} se aceptará la práctica después de 3 días de retraso.
+  \end{itemize}
+\end{itemize}
+
+\end{document}

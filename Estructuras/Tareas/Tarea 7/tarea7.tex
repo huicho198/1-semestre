@@ -1,0 +1,34 @@
+\documentclass[paper=letter, fontsize=12pt]{scrartcl}
+\usepackage{amsmath, amssymb, latexsym}
+\usepackage{anyfontsize}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\begin{document}
+\parindent=0mm:
+	\begin{center}
+  Estructuras Discretas 2017-1\\
+  Tarea 7\\
+\end{center}
+
+Alumno: Luis Alberto Martinez Monroy\\
+N cuenta: 314212391\\ \\
+{\bf 1.- Utilizando los predicados definidos en la clase  para el mundo de Triángulos, circulos y cuadrados, traduce a lógica de primer orden los siguientes enunciados. decide si cada Fórmula es verdadera o falsa en el mundo de la Figura1.}\\
+a) Existe un cuadrado grande al norte de todos los triangulos medianos y de algun circulo pequeño.\\
+
+$\exists x(S(x)\wedge G(x) \wedge \forall y(T(y)\wedge M(y)\rightarrow N(x,y) )\wedge \exists z(C(z)\wedge P(z)\wedge N(x,z)))$\\ 
+Dado el micromundo, Este enunciado es Falso.\\
+
+b)Si hay un circulo pequeño al sur de todos los cuadrados, etonces todos los triangulos que estan en la misma columna que este circulo pequeño son pequeños.\\
+$\exists x(C(x)\wedge P(x)\wedge\forall y(S(y)\rightarrow N(x,y))\rightarrow \forall z(T(z)\wedge Co(x,z)\rightarrow P(z)))$\\
+Dado el micromundo, Este enunciado es Falso.\\
+
+c)Ningun circulo grande se encuentra en la misma columna de un triangulo pequeño.\\
+$\forall x \exists y(C(x)\wedge G(x)\wedge T(y)\wedge P(y)\rightarrow \neg R(x,y))$\\
+Dado el micromundo, Este enunciado es Falso.\\
+
+
+d)Existe un cuadrado que se encuentra en un renglon donde no hay un circulo ni un triangulo.\\
+$\exists x\forall y(S(x)\wedge R(x,y)\rightarrow \neg C(x)\wedge\neg T(y) ) $
+Dado el micromundo, Este enunciado es Verdadero.\\
+ \end{document}}
+

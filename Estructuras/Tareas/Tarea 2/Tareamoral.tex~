@@ -1,0 +1,16 @@
+\documentclass{book}
+\textheight=19cm
+\textwidth=14cm
+\topmargin=-2cm
+\usepackage{amsmath,amssymb,latexsym}
+
+\begin{document}
+Alumno: Luis ALberto Martinez Monroy\\
+N° Cuenta:314212391\\
+Materia: Estructuras Discretas\\
+\begin{center}
+  LEYES DE MORGAN
+\end{center}
+En lógica proposicional y álgebra de Boole, las leyes De Morgan
+\end{document}
+

@@ -1,0 +1,7 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Generalidades de T\kern -.1667em\lower .5ex\hbox {E}\kern -.125emX\spacefactor \@m {} y \LaTeX }{3}{0}{1}
+\beamer@sectionintoc {2}{Instalando e Iniciando}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Editando archivos \LaTeX }{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Compilaci\IeC {\'o}n}{7}{0}{2}
+\beamer@sectionintoc {3}{Clases}{8}{0}{3}

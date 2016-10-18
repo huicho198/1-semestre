@@ -1,0 +1,98 @@
+\documentclass[paper=letter, fontsize=12pt]{scrartcl}
+\usepackage{amsmath, amssymb, latexsym}
+\usepackage{anyfontsize}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+\parindent=0mm:
+	\begin{center}
+  Estructuras Discretas 2017-1\\
+  Tarea 4\\
+\end{center}
+
+Alumno: Luis Alberto Martinez Monroy\\
+N cuenta: 314212391\\ \\
+
+1.- Mostrar todos los modelos para el siguiente conjunto de formulas\\
+$$
+\Gamma = \{p \rightarrow q \rightarrow r, p\wedge s \rightarrow t, r\rightarrow s, p\wedge q \rightarrow t, s\}
+$$
+
+
+Modelo 1: I(p)=1, I(q)=1, I(r)=1, I(s)=1, I(t)=1.\\
+Modelo 2: I(p)=1, I(q)=0, I(r)=1, I(s)=1, I(t)=1.\\
+Modelo 3: I(p)=1, I(q)=0, I(r)=0, I(s)=1, I(t)=1.\\
+Modelo 4: I(p)=0, I(q)=1, I(r)=1, I(s)=1, I(t)=1.\\
+Modelo 5: I(p)=0, I(q)=1, I(r)=1, I(s)=1, I(t)=0.\\
+Modelo 6: I(p)=0, I(q)=1, I(r)=0, I(s)=1, I(t)=1.\\
+Modelo 7: I(p)=0, I(q)=1, I(r)=0, I(s)=1, I(t)=0.\\
+Modelo 8: I(p)=0, I(q)=0, I(r)=1, I(s)=1, I(t)=1.\\
+Modelo 9: I(p)=0, I(q)=0, I(r)=1, I(s)=1, I(t)=0.\\
+Modelo 10: I(p)=0, I(q)=0, I(r)=0, I(s)=1, I(t)=1.\\
+Modelo 11: I(p)=0, I(q)=0, I(r)=0, I(s)=1, I(t)=0.\\
+
+
+2.- Decidir para cada caso si I es modelo:\\
+
+a)$ (p\rightarrow q) \wedge \neg q \rightarrow r$\\
+
+I(p)= 1\\
+I(q)= 1\\
+I(r)= 0\\
+
+I si es modelo para este caso.\\
+
+b)$ r \rightarrow (p\rightarrow q)\wedge \neg q$\\
+
+I(p)= 1\\
+I(q)= 0\\
+I(r)= 0\\
+
+I si es modelo para este caso.\\
+
+c)$(r\rightarrow \neg r) \vee ((p \rightarrow q)\wedge \neg q) $\\
+
+I(p)= 0\\
+I(q)= 1\\
+I(r)= 0\\
+
+I para este caso no es modelo.
+
+3.-Utilizando interpretaciones, comprobar si se cumplen las siguientes afirmacion:\\
+
+a)$\{p \vee q\} \models p\rightarrow q$\\
+I($p\vee q$)=1.\\
+
+Modelo 1: I(p)=1, I(q)=1.\\
+Modelo 2: I(p)=0, I(q)=1.\\
+Modelo 3: I(p)=1, I(q)=0.\\
+
+Por metodo de interpretacion directa, podemos decir que no se cumple la consecuencia logica, debido a que en el modelo 3, la implicacion no es verdadera.\\
+
+b)$\{ p\rightarrow q, \neg r \rightarrow \neg q \} \models p\rightarrow r$\\
+I($p\rightarrow q$)=1.\\
+I($\neg r\rightarrow \neg q$)= 1.\\
+
+Modelo 1: I(p)=1, I(q)=1, I(r)=1.\\
+Modelo 2: I(p)=0, I(q)=0, I(r)=0.\\
+Modelo 3: I(p)=0, I(q)=0, I(r)=1.\\
+Modelo 4: I(p)=0, I(q)=1, I(r)=1.\\
+
+Por metodo de interpretacion directa podemos decir que si se cumple la concecuencia logica.\\
+
+c)$\{ p \wedge \neg p \} \models r\leftrightarrow r\vee q$\\
+Tenemos que la expresion $p\wedge \neg p $ es una contradiccion por lo que es falsa. eso quiere decir que la premisa al ser falsa, tendra como concecuencia automatica una implica logica verdadera, por lo que es equivalente a decir que si se cumple la concecuencia logica.\\
+
+d)$\{ p\rightarrow q, q\rightarrow p \wedge r\}\models p\rightarrow (p\rightarrow q) \rightarrow r$
+
+Modelo 1: I(p)=1, I(q)=1, I(r)=1.\\
+Modelo 2: I(p)=0, I(q)=0, I(r)=1.\\
+Modelo 3: I(p)=0, I(q)=0, I(r)=0.\\
+
+Por metodo de interpretacion directa, podemos decir que no se cumple la consecuencia logica, debido a que en el modelo 2, la implicacion no es verdadera.\\
+
+
+
+\end{document}
+

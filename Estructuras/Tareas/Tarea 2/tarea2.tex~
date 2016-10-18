@@ -1,0 +1,16 @@
+\documentclass{Book}
+\textheight=19cm
+\textwidth=14cm
+\topmargin=-2cm
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\title{Estructuras Discretas 2017-1}
+\begin{center}
+  Tarea 2\\
+\end{center}
+Alumno: Luis Alberto Martinez Monroy
+N° cuenta: 314212391
+\end{document}
+

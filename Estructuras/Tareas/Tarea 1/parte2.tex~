@@ -1,0 +1,16 @@
+\documentclass[tikz,border=5]{standalone}
+\usetikzlibrary{graphs,graphdrawing,arrows.meta}
+\usepackage{MnSymbol}
+\usepackage{wasysym}
+\usepackage{amsmath, amssymb, latexsym}
+\usepackage{anyfontsize}
+\usegdlibrary{trees}
+\begin{document}
+
+\begin{tikzpicture}[>=Stealth]
+\graph[binary tree layout]{
+  S -> {$\blacksquare$, E}
+  };
+\end{tikzpicture}[>=Stealth]
+\end{document}
+   

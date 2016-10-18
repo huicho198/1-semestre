@@ -1,0 +1,28 @@
+\documentclass{book}
+\textheight=19cm
+\textwidth=14cm
+\topmargin=-2cm
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+Alumno: Luis ALberto Martinez Monroy\\
+N° Cuenta:314212391\\
+Materia: Estructuras Discretas\\
+\begin{center}
+  LEYES DE MORGAN
+\end{center}
+En lógica proposicional y álgebra de Boole(teoría de conjuntos), las leyes De Morgan son un par de reglas de transformación que son ambas reglas de inferencia válidas. Las normas permiten la expresión de las conjunciones y disyunciones puramente en términos de sí vía negación.\\
+Las reglas se pueden representar como:\\ \\
+1.  \neg (P\wedge Q)\leftrightarrow (\neg P \vee \neg Q)\\ \\
+2.  \neg(P \vee Q) \leftrightarrow (\neg P \wedge \neg Q)\\ \\
+
+En la teoría de conjuntos:
+1.- El complemento de la unión de dos conjuntos es igual a la intersección de los complementarios de dichos conjuntos.\\
+ \overline{A\cup B} \equiv \overline{A}\cap \overline{B}\\ \\
+
+2. \overline{A\cap B} \equiv \overline{A}\cup \overline{B}\\
+
+Demostracion:\\
+\end{document}
+

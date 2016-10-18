@@ -1,0 +1,138 @@
+\documentclass[paper=letter, fontsize=12pt]{scrartcl}
+\usepackage{amsmath, amssymb, latexsym}
+\usepackage{anyfontsize}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\begin{document}
+
+	\begin{center}
+  Estructuras Discretas 2017-1\\
+  Tarea 3\\
+\end{center}
+
+Alumno: Luis Alberto Martinez Monroy\\
+N° cuenta: 314212391}\\ \\
+
+1.- Considere el siguiente argumento:
+\\
+ Un videojuego es de PC o es de consola. Un videojuego no tiene limites si es de PC. Es necesario que un videojuego falle para que sea de consola. Es suficiente que un videojuego sea de PC o no falle para que sea perfecto. Luego entonces un videojuego no tiene limites o falla.
+
+a)Realice la traduccion a la lógica proposicional especificando primero el significado de cada variable usada.
+
+\begin{center}
+p := Un videojuego es de PC\\
+q := Un videojuego es de consola\\
+r := Un videojuego tiene limites\\ 
+s := Un videojuego falla\\
+t := Un videojuego sea perfecto\\
+$p \vee q$\\
+$\neg r \rightarrow p$\\
+$q \rightarrow s$\\
+$(p \vee \neg s) \rightarrow t$\\
+
+ $\because \neg r \vee s$\\
+
+\end{center}\\
+\newpage
+
+b) Decida la correctud del argumento usando la formula asociada al argumento lógico.\\
+$$
+(p \vee q)\wedge(\neg r \rightarrow p)\wedge(q \rightarrow s) \wedge ((p \vee \neg s) \rightarrow t) \backslash \because \neg r \vee s
+$$\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $s$ & $t$ & $(p\vee q$ & $\wedge$ & $\neg r \rightarrow p$ & $\wedge$ & $q \rightarrow s$ & $\wedge$ & $(p \vee \neg s)$ & $\rightarrow$ & $t)$ & $\rightarrow $ & $\neg r \vee s$ \\\hline
+V & V & V & V & V & V & V & V & V & V & V & V & V & V & V & V\\ \hline 
+V & V & V & V & F & V & V & V & F & V & F & V & F & F & V & V\\ \hline
+V & V & V & F & V & V & V & V & F & F & F & V & V & V & V & F\\ \hline
+V & V & V & F & F & V & V & V & F & F & F & V & F & F & V & F\\ \hline
+V & V & F & V & V & V & V & V & V & V & V & V & V & V & V & V\\ \hline
+V & V & F & V & F & V & V & V & F & V & F & V & F & F & V & V\\ \hline
+V & V & F & F & V & V & V & V & F & F & F & V & V & V & V & V\\ \hline
+V & V & F & F & F & V & V & V & F & F & F & V & F & F & V & V\\ \hline
+V & F & V & V & V & V & V & V & V & V & V & V & V & V & V & V\\ \hline
+V & F & V & V & F & V & V & V & F & V & F & V & F & F & V & V\\ \hline
+V & F & V & F & V & V & V & V & V & V & V & V & V & V & F & F\\ \hline
+V & F & V & F & F & V & V & V & F & V & F & V & F & F & V & F\\ \hline
+V & F & F & V & V & V & F & F & F & V & V & V & V & V & V & V\\ \hline
+V & F & F & V & F & V & F & F & F & V & F & V & F & F & V & V\\ \hline
+V & F & F & F & V & V & F & F & F & V & V & V & V & V & V & V\\ \hline
+V & F & F & F & F & V & F & F & F & V & F & V & F & F & V & V\\ \hline
+F & V & V & V & V & V & V & V & V & V & V & F & V & V & V & V\\ \hline
+F & V & V & V & F & V & V & V & V & V & V & F & V & F & V & V\\ \hline
+F & V & V & F & V & V & V & V & F & F & F & V & V & V & V & F\\ \hline
+F & V & V & F & F & V & V & V & F & F & F & V & F & F & V & F\\ \hline
+F & V & F & V & V & V & V & V & V & V & V & F & V & V & V & V\\ \hline
+F & V & F & V & F & V & V & V & V & V & V & F & V & F & V & V\\ \hline
+F & V & F & F & V & V & V & V & F & F & F & V & V & V & V & V\\ \hline
+F & V & F & F & F & V & V & V & F & F & F & V & F & F & V & V\\ \hline
+F & F & V & V & V & F & F & V & F & V & V & F & V & V & V & V\\ \hline
+F & F & V & V & F & F & F & V & F & V & V & F & V & F & V & V\\ \hline
+F & F & V & F & V & F & F & V & F & V & V & V & V & V & V & F\\ \hline
+F & F & V & F & F & F & F & V & F & V & F & V & F & F & V & F\\ \hline
+F & F & F & V & V & F & F & F & F & V & V & F & V & V & V & V\\ \hline
+F & F & F & V & F & F & F & F & F & V & V & F & V & F & V & V\\ \hline
+F & F & F & F & V & F & F & F & F & V & V & V & V & V & V & V\\ \hline
+F & F & F & F & F & F & F & F & F & V & F & V & F & F & V & V\\ \hline
+
+\end{tabular}\\
+
+\end{center}\\
+Como podemos observar a tráves de la tabla de verdad esta es una CONTINGENCIA, por lo que no es correctamente valido el argumento al no ser una tautologia, es decir, ser verdad en todos sus casos.\\ 
+\\
+
+2.- Decidir utilizando leyes de equivalencia lógica (justifique), si se cumple lo siguiente:\\
+A) $(p\wedge (q\rightarrow r))\rightarrow r \wedge (p \vee s)$  \equiv  $\neg p \vee (q\wedge \neg r) \vee (r\wedge p) \vee (r\wedge s)$\\
+
+
+$
+ \equiv  \neg p \vee (q\wedge \neg r) \vee (r \wedge (p\vee s)) (2.27)\\
+
+ \equiv  (\neg p \vee (\neg \neg q \vee \neg r) \vee (r\wedge(p\vee s)) (2.25)\\
+
+ \equiv  (\neg p \vee \neg (\neg q \vee  r) \vee (r\wedge (p\vee s))  (2.29)\\
+ 
+ \equiv  \neg (p \wedge (\neg q \vee r)) \vee (r\wedge (p \vee s))  (2.28)\\
+
+ \equiv  \neg (p \wedge (q \rightarrow r)) \vee (r \wedge (p \vee s))  (2.30)\\
+ 
+ \equiv (p \wedge (q\rightarrow r)) \rightarrow (r \wedge (p \vee s)) (2.30)\\
+ $\\
+
+B)$p \leftrightarrow q \equiv (p \wedge q) \vee (\neg p \wedge \neg q)$\\
+
+$
+
+\equiv ((p\wedge q)\vee \neg p)\wedge ((p\wedge q)\vee \neg q) (2.26) \\
+
+\equiv ((\neg p \vee(p\wedge q)) \wedge (\neg q \vee(p \wedge q)) (2.21) \\
+
+\equiv (\neg p \vee (1 \wedge q)) \wedge (\neg q \vee (p \wedge 1)) (2.23)\\
+
+\equiv (\neg p \vee q ) \wedge (\neg q \vee p) (2.16)\\
+
+\equiv (\neg p \vee q)\wedge (p \vee \neg q) (2.21)\\
+
+\equiv (p \leftrightarrow q) (2.31)\\
+$\\
+
+\newpage
+C)$\neg p \vee s \rightarrow q \wedge r  \equiv s\vee \neg p \rightarrow \neg (q\rightarrow \neg r)$
+
+$
+\equiv \neg p \vee s \rightarrow \neg(q\rightarrow \neg r) (2.21)\\
+
+\equiv \neg p \vee s \rightarrow \neg(\neg q \vee \neg r) (2.30)\\
+
+\equiv \neg p \vee s \rightarrow (\neg \neg q \wedge \neg \neg r) (2.29)\\
+
+\equiv \neg p \vee s \rightarrow q \wedge r (2.25)\\
+
+$
+\end{document}
+

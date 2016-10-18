@@ -1,0 +1,66 @@
+\documentclass{book}
+\textheight=19cm
+\textwidth=14cm
+\topmargin=-2cm
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+Alumno: Luis ALberto Martinez Monroy\\
+N° Cuenta:314212391\\
+Materia: Estructuras Discretas\\
+\begin{center}
+  LEYES DE MORGAN
+\end{center}
+En lógica proposicional, las leyes De Morgan son un par de reglas de transformación que son ambas reglas de inferencia válidas..\\
+Las reglas se pueden representar como:\\ \\
+1.  \neg (P\wedge Q)\leftrightarrow (\neg P \vee \neg Q)\\ \\
+2.  \neg(P \vee Q) \leftrightarrow (\neg P \wedge \neg Q)\\ \\
+demostracion:\\
+Regla 1:\\
+\begin{center}
+\begin{tabular}{|o|o|o|o|o|}\hline
+ $P$ & $Q$ &  $\neg(P \wedge Q)$ & $\leftrightarrow$ & $(\neg P \vee \neg Q)$\\ \hlien
+  V & V & F & V & F\\ \hline
+  V & F & V & V & V\\ \hline
+  F & V & V & V & V\\ \hline
+  F & F & V & V & V\\ \hline
+\end{tabular}
+\\
+Regla 2: \\
+\\
+\begin{tabular}{|o|o|o|o|o|}
+  $P$ & $Q$ & $\neg(P \vee Q)$ & $\leftrightarrow$ & $(\neg P \wedge \neg Q)$\\ \hline
+  V & V & F & V & F\\ \hline
+  V & F & F & V & F\\ \hline
+  F & V & F & V & F\\ \hline
+  F & F & V & V & V\\ \hline
+
+\end{tabular}
+\end{center}
+
+\\
+Y asi podemos comprobar que son logicamente equivalentes las proposiciones dadas.
+\\
+\\
+
+En la teoría de conjuntos dos conjuntos son iguales si tienen los mismos elementos; es decir se puede demostrar que todos los elementos de uno están contenidos en  el otro y viceversa.
+\\
+1. (A\cup B)\equiv A\cap B\\ \\
+
+2. (A\cap B)\equiv A\cup B\\
+
+Demostracion:\\
+Regla 1:
+\begin{center}
+  $(A\cup B)$ = $A\cap B$\\
+  $x \in (A\cup B)$\rightarrow $x \not\in A\cup B$\righarrow $(x \not\in A)$ y $(x \not\in B)$\rightarrow $(x\in A)$ y $(x \in B)$\rightarrow $ x \in (A \cap B) $\\\\
+
+  Regla 2:\\\\
+  $(A\cap B)$ = $A \cup B$\\
+  $x \in (A\cap B )$\leftrightarrow $x\not\in A \cap B$\leftrightarrow $(x\not\in A)$y $(x\not\in B)$\leftrightarrow $(x\in A)$ y $(x\in B)$\leftrightarrow $x\in (A\cup B)$\\ 
+\end{center}
+Y asi podemos demostrar que la union de un conjunto A Y B es igual a la Interseccion del conjunto A Y B y viceversa.
+
+\end{document}
+

@@ -1,0 +1,160 @@
+\documentclass{article}
+\textheight=25cm
+\textwidth=15cm
+\topmargin=-2cm
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\begin{document}
+
+\begin{center}
+  Estructuras Discretas 2017-1\\
+  Tarea 2\\
+\end{center}
+Alumno: Luis Alberto Martinez Monroy\\
+N° cuenta: 314212391\\ \\
+
+ Realice los siguientes ejercicios:\\
+1. Use variables proposicionales (p,q,r,...) para formalizar los siguientes arfumentos lógicos. Liste como asigna las variables a las proposiciones atómicas. Luego exprese los ennunciados en el lenguaje de la lógica proposicional usando sus variables.\\\\
+
+a)Hay sol y tengo frío sólo si es diciembre o vivo en el DF.\\
+\begin{center}
+  p := hay sol\\
+  q := tengo frío\\
+  r := es diciembre\\
+  w := vivo en el DF\\\\
+
+  $p\wedge q $\rightarrow $r \vee w$
+\end{center}
+\\
+b)Lucho Sabe mucho si y sólo si Lucho estudió; Lucho no estudió y Lucho pasó el examen; Lucho tiene suerte o sabe mucho.\\
+\begin{center}
+  p := Lucho sabe mucho\\
+  q := Lucho Estudió\\
+  w := Lucho pasó el examen\\
+  x := Lucho tiene suerte\\\\
+  $p \leftrightarrow q$\\
+  $\neg q \wedge w$\\
+  $x \vee p$
+\end{center}
+c)Si yo un alien: mi perro es azul y mi gato es naraja; y mi gato es naranja solamente si tengo piel verde.\\
+\begin{center}
+p := si yo un alien\\
+q := mi perro es azul\\
+x := mi gato es naranja\\
+w := tengo piel verde\\\\
+
+$p \rightarrow (q\wedge x)$\\
+$x \leftrightarrow w$
+\end{center}
+\\
+\\
+d) x es un número, x es primo o uno; x no es primo entonces es número par;$x \geq 1$y x es primo o x es par es suficiente para que x no sea uno\\
+\begin{center}
+  p := x es un número\\
+  q := x es primo\\
+  j :=   es uno\\
+  w := es número par\\
+  z := $x \geq 1$\\\\
+
+  $p \rightarrow (q\vee j)$\\
+  $\neg q \rightarrow w$\\
+  $(z \wedge (q \vee w))\rightarrow \neg j$\\
+
+  
+\end{center}
+
+2. Cree las tablas de verdad de las siguientes expresiones y decida si son tautologías, contraducciones o contigencias.\\
+
+a)$\neg p$\wedge $(p \vee q)$\rightarrow q \rightarrow \neg p\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+  $p$ & $q$ & $\neg p$ & $\wedge$ & $p \vee q$ & $\rightarrow$ & $q$ & $\rightarrow$ & $\neg p$\\ \hline
+  V & V & F & F & V & V & V & F & F \\ \hline
+  V & F & F & F & V & V & F & V & F \\ \hline
+  F & V & V & V & V & V & V & V & V \\ \hline
+  F & F & V & F & F & V & F & V & V \\ \hline
+ & & & & & ES UNA TAUTOLOGIA  & &  \\ \hline
+
+\end{tabular}
+\end{center}
+
+b)($p \vee q$)\wedge ($p \rightarrow q$)\wedge ($q \rightarrow r$)\rightarrow $r$
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
+    $p$ & $q$ & $r$ & $(p \vee q)$ & $\wedge$ & $(p \rightarrow r)$ & $\wedge$ & $(q \rightarrow r)$ & $\rightarrow$ & $r$\\ \hline
+    V & V & V & V & V & V & V & V & V & V\\ \hline
+    V & V & F & V & F & F & F & F & V & F\\ \hline
+    V & F & V & V & V & V & V & V & V & V\\ \hline
+    V & F & F & V & F & F & F & V & V & F\\ \hline
+    F & V & V & V & V & V & V & V & V & V\\ \hline
+    F & V & F & V & V & V & F & F & V & F\\ \hline
+    F & F & V & F & F & V & F & V & V & V\\ \hline
+    F & F & F & F & F & V & F & V & V & F\\ \hline
+    & & & & & & & & ES UNA TAUTOLOGIA & \\ \hline
+  \end{tabular}
+\end{center}
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+
+\begin{flushleft}
+c)(($r\leftrightarrow \neg s$)\wedge ($p \vee q$))\wedge \neg $q$\rightarrow $t$ \\
+\end{flushleft}
+\begin{center}
+  \begin{tabular}{|o|o|o|o|o|o|o|o|o|o|o|o|}\hline
+    $r$ & $s$ & $t$ & $p$ & $q$ & $((r\leftrightarrow \neg s)$ & $\wedge$ & $(p \vee q))$ & $\wedge$ & $\neg q$ & $\rightarrow$ & $t$\\ \hline
+    V & V & V & V & V & F & F & V & F & F & V & V\\ \hline
+    V & V & V & V & F & F & F & V & F & V & V & V\\ \hline
+    V & V & V & F & V & F & F & V & F & F & V & V\\ \hline
+    V & V & V & F & F & F & F & F & F & V & V & V\\ \hline
+    V & V & F & V & V & F & F & V & F & F & V & F\\ \hline
+    V & V & F & V & F & F & F & V & F & V & V & F\\ \hline
+    V & V & F & F & V & F & F & V & F & F & V & F\\ \hline
+    V & V & F & F & F & F & F & F & F & V & V & F\\ \hline
+    V & F & V & V & V & V & V & V & F & F & V & V\\ \hline
+    V & F & V & V & F & V & V & V & V & V & V & V\\ \hline
+    V & F & V & F & V & V & V & V & F & F & V & V\\ \hline
+    V & F & V & F & F & V & F & F & F & V & V & V\\ \hline
+    V & F & F & V & V & V & V & V & F & F & V & F\\ \hline
+    V & F & F & V & F & V & V & V & V & V & F & F\\ \hline
+    V & F & F & F & V & V & V & V & F & F & V & F\\ \hline
+    V & F & F & F & F & V & F & F & F & V & V & F\\ \hline
+    F & V & V & V & V & V & V & V & F & F & V & V\\ \hline
+    F & V & V & V & F & V & V & V & V & V & V & V\\ \hline
+    F & V & V & F & V & V & V & V & F & F & V & V\\ \hline
+    F & V & V & F & F & V & F & F & F & V & V & V\\ \hline
+    F & V & F & V & V & V & V & V & F & F & V & F\\ \hline
+    F & V & F & V & F & V & V & V & V & V & F & F\\ \hline
+    F & V & F & F & V & V & V & V & F & F & V & F\\ \hline
+    F & V & F & F & F & V & F & F & F & V & V & F\\ \hline
+    F & F & V & V & V & F & F & V & F & F & V & V\\ \hline
+    F & F & V & V & F & F & F & V & F & V & V & V\\ \hline
+    F & F & V & F & V & F & F & V & F & F & V & V\\ \hline
+    F & F & V & F & F & F & F & F & F & V & V & V\\ \hline
+    F & F & F & V & V & F & F & V & F & F & V & F\\ \hline
+    F & F & F & V & F & F & F & V & F & V & V & F\\ \hline
+    F & F & F & F & V & F & F & V & F & F & V & F\\ \hline
+    F & F & F & F & F & F & F & F & F & V & V & F\\ \hline
+    & & & & & & & & & & ES UNA CONTINGENCIA &\\ \hline
+    
+  \end{tabular}
+\end{center}
+
+
+
+
+\end{document}
+

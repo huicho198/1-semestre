@@ -1,0 +1,121 @@
+%author Luis Alberto Martinez Monroy
+%Materia Estructuras Discretas 2017-1
+%Numero de cuenta: 314212391
+%Practica de Laboratorio #1
+%Profesora: Laura Freidberg Gojman
+%Ayudante de laboratorio: Albert Manuel Orozco Camacho
+%Facultad de ciencias
+
+\documentclass{report}%tipo de documento.
+\textheight=25cm % delimitado el alto del area de impresion
+\textwidth=15cm % delimitado lo ancho del area de imprecion
+\topmargin=-3cm % delimita el margen superior
+
+
+\usepackage[spanish]{babel}% paquete para lengua en español
+\usepackage[utf8]{inputenc}%paquete para poner acentos, etc.
+\usepackage{graphicx} %Paquete para incluir graficos
+\usepackage[T1]{fontenc}%tipo de letra
+% paquete para cabezera y pie de pagina.
+\usepackage{lastpage}%Hace referencia al numero de paginas
+\usepackage{ifthen}
+\usepackage{amsmath,amsfonts,amsthm} %paquetes matematicos
+\usepackage{sfmath} % paquetes matematicos
+\usepackage{anyfontsize} %paquete para tamaño de texto
+\usepackage{hyperref} %Paquete para hipervinculo
+
+
+\begin{document} % inicia el contenido de mi documento
+
+\thispagestyle{plain}%tipo de la hoja
+               \titlehead% Esto es para poner algunos datos como la escuela, prof, etc.
+                   {
+                     Materia: Estructuras Discretas 2017-1\\
+                     Profesora: Laura Freudberg Gojman\\
+                     Universidad Nacional Autonoma De México\hfill
+                     Facultad de ciencias\\
+                     Alumno: Luis Alberto Martinez Monroy
+                   }
+
+
+\begin{center}% No funciono \title y \subtitle asi que esta es la representacion de mi titulo y mi subtitulo buscando alternativas.
+
+{\Huge Practica #1 Estructuras Discretas\\}\\% Este es el Titulo
+{\Large Plantilla para practicas de laboratorio}\\\\% Este es el subtitulo
+\hrule\\%Esta es la linea que aparece despues del subtitulo
+
+\end{center}
+\vspace{.3cm} %espaciado vertical 
+\begin{center}%Para centrar mi nombre y la fecha despues del espaciado
+Alumno: Luis Alberto Martinez Monroy\\\\% Nombre de alumno
+N Cuenta: 314212391\\\\%Numero de cuenta
+
+\begin{tabular}{cc}%fecha de entrega, pero lo puse como en tabla para que se viera muy bonito y sin lineas
+                       \textsc{Fecha de entrega:}& \textsc{28 de agosto 2016}\\
+                   \end{tabular}
+
+\end{center}% termina el centrado de nombre y fecha
+\Seccion{{\Large Actividades}}\\%formato titulo de secciones
+\subseccion{{\large1.-¿Qué es un Fractal?}}{\small\\
+Un fractal es una figura volumetrica o plana que forma secuencias infinitas, estas no varian aun cuando se modifique la escala de visualizacion. Se considera como un elemento semi-geometrico.
+}% Formato para los titulos de las secciones y tambien para el tamaño de letra de los parrafos
+\\
+\subseccion{{\large 2.- Escribe cuatro situaciones del mundo real en las que aparece la sucesion de Fibonnaci}{\small
+
+
+
+ \begin{itemize} %muestra lista pero sin enumerar.
+                     \item Caso 1: El crecimento de las hojas sobre el tallo de las plantas tiene una tendencia a la sucesion de Fibonnaci. % Es para poner un puntito de la lista
+                     \item Caso 2: Los brazos de los espirales de las galaxias se acomodan de acuerdo a la sucesion de Fibonnaci. 
+                     \item Caso 3:Las piñas de los arboles de cualquier tipo tienen un espiral que coincide exactamente con la secuencia de Fibonnaci 
+                     \item Caso 4:El numero de petalos de una margarita tiene una sucesion de petalos de acuerdo a la razon de Fibonacci.
+\end{itemize}% termina el enlistado.
+}\\
+\subseccion{{\large 3.- ¿Qué tienen en comun los fractales y la sucesión de Fibonnaci?}}\\{\small
+	Los fractales son representaciones que tienden a ser cadenas dentro de si mismas, al mismo caso dentro de el numero de fibonnaci da representaciones en cadena definido dentro de si mismo. pero lo reelevante de esto es que la sucesion de Fibonnaci se puede representar como un Fractal.% dentro de esto esta el formato de subsecciones y de parrafos
+}\\\\
+\subseccion{{\large4.- Lista de distribuciones de LINUX}}{\small
+\begin{enumerate}{% esta seccion es para abrir el listado de cosas y enumerado automatico, en este caso para las algunas distribuciones de linux
+\item Debian
+\begin{enumerate}{
+	\item Ubuntu
+	
+	\begin{enumerate}{
+\item Kubuntu
+ \item Edubuntu
+ \item Linux Mint
+	}
+	\end{enumerate}
+}
+\end{enumerate}
+\item Mageia
+\item Gentoo
+\item Slackware Liux
+\item SuSE Linux
+\item Redhad
+\begin{enumerate}{
+	\item Fedora
+}
+\end{enumerate}
+}
+\end{enumerate}
+}\\
+
+\subseccion{{\large5. Comentario del video: ¿se acabaran algun dia los nombres?}}\\{\small
+Esta entretenido pero mas que nada en realidad es como hacerte reflexionar si alguna vez se acabarian los nombres y si de ser asi, que podria pasar, sin embargo, muestra los argumentos de los cuales no podria pasar y como afecta el internet a los nombres normales al volverlos famosos y tambien de como te puedes esconder detras de un nombre virtual con un nombre que posiblemente esta pensado en lo que quieres representar, sea verdad o falso.\\
+En los particular fue muy interesante y si te hace pensar mucho.
+
+}\\
+
+
+\begin{thebibliography}{10}% esta es la parte de la bibliografia
+\bibitem{fractal}{\texttt{http://www.ub.edu/matefest_infofest2011/triptics/fractal.pdf}\\ \texsc{Consultado por ultima vez el 25 de agosto del 2016}}\\
+% fue un pequeño problema poner el url de las paginas, pero al final pude con el comando \texttt.
+
+\bibitem{Secuencia de Fibonacci}{\texttt{http://www.neoteo.com/la-sucesion-de-fibonacci-en-la-naturaleza}\\ \texsc{Consultado por ultima vez el 25 de agosto del 2016}}\\
+
+\bibitem{Distribuciones de Linux}{\texttt{http://distrowatch.com/dwres.php?resource=major}\\ \texsc{Consultado por ultima vez el 25 de agosto del 2016}}\\
+
+\bibitem{Nombres}{\texttt{https://www.youtube.com/watch?v=ONs_qejnD8c}\\ \texsc{Consultado por ultima vez el 25 de agosto del 2016}}\\
+\end{thebibliography}% termina el formato de bibliografia
+\end{document}%termina todo el contenido de mi documento.

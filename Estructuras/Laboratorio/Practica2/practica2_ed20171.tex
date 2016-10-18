@@ -1,0 +1,182 @@
+%% Práctica 2 del curso de Estructuras Discretas, 2017-1
+%% Facultad de Ciencias, UNAM
+%% Profa: Laura Freidberg Gojman
+%% Ayudante: José Ricardo Rodríguez Abreu
+%% Ayudante de lab: Albert Manuel Orozco Camacho
+
+%% Author: AlOrozco53
+%% Version: 0.5
+
+%% Comienza el preámbulo del documento
+\documentclass[paper=letter, fontsize=12pt]{scrartcl}
+
+\usepackage[utf8]{inputenc} %% codificación para la inserción acentos y otros carácteres especiales
+\usepackage[T1]{fontenc} %% codificación para la impresión de acentos y otros carácteres especiales
+\usepackage[english, spanish]{babel} %% idioma del documento
+
+%% Los siguientes paquetes sirven para utilizar símbolos especiales (principalmente de matemáticas)
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+
+\usepackage{hyperref} %% paquete para manejo de hipervínculos
+\usepackage{listings} %% paquete para insertar código fuente
+
+\usepackage{sectsty} %% paquete para cambiar el estilo de encabezados de sección
+
+\parindent=5mm %% sangría
+\parskip=2mm %% espaciado
+
+%% Formato de fuentes de encabezados de secciones
+\allsectionsfont{\raggedright\large \textit\normalfont\scshape\emph}
+
+%% Título
+\title{Práctica 2}
+
+%% Subtítulo
+\subtitle{
+  Estructuras Discretas, 2017-1\\
+  Facultad de Ciencias, UNAM
+}
+
+%% Autores
+\author{
+  \normalsize
+  Laura Freidberg Gojman\\
+  \normalsize
+  \texttt{\href{mailto:lfreidberg@yahoo.com}{lfreidberg@yahoo.com}}
+  \and
+  \normalsize
+  José Ricardo Rodríguez Abreu\\
+  \normalsize
+  \texttt{\href{mailto:ricardo_rodab@ciencias.unam.mx}{ricardo\_rodab@ciencias.unam.mx}}
+  \and
+  \normalsize
+  Albert Manuel Orozco Camacho\\
+  \normalsize
+  \texttt{\href{mailto:alorozco53@ciencias.unam.mx}{alorozco53@ciencias.unam.mx}}
+}
+
+%% Fecha de hoy
+\date{\today}
+%% Fin del preámbulo del documento
+
+%% Comienza el cuerpo del documento
+\begin{document}
+
+%% Creación del título
+\maketitle
+
+\section*{Objetivo de la práctica}
+
+\noindent
+El alumno ejercitará el uso de las diversas herramientas para imprimir símbolos, operaciones,\
+ecuaciones y figuras matemáticas. Además, tendrá la posibilidad de establecer definiciones,\
+axiomas, teoremas y corolarios, así como demostrar éstos últimos.
+
+\section*{Preámbulo}
+
+\noindent
+Probablemente la característica que hace que \LaTeX{} sea tan popular en la comunidad académica\
+es la facilidad que brinda al usuario de incorporar sintaxis técnica a documentos. En particular,\
+los que radicamos dentro de o para alguna carrera del Departamento de Matemáticas de la Facultad\
+de Ciencias, nos interesamos en simbología matemática.
+
+\section*{Actividades a realizar}
+
+\noindent
+Utilizando lo visto en clase (presentación y libro de consulta), realizar lo siguiente,\
+especificando paso por paso:
+\newpage
+\begin{enumerate}
+\item $[\frac{1}{10}\mbox{ pts.}]$ Formalice el siguiente argumento usando variables proposicionales:\par
+ \emph{``Si un unicornio es mítico también es inmortal, pero si no lo es, entonces es un mamífero mortal.\
+  Si un unicornio es inmortal o mamífero tiene cuerno. Un unicornio es mágico si tiene un cuerno.\
+  Luego entonces simpre un unicornio es mágico y tiene cuerno.''}
+\item $[\frac{1}{10}\mbox{ pts.}]$ Probar que el argumento anterior es válido (satisfacible)\
+  utilizando interpretaciones.
+\item $[\frac{1}{10}\mbox{ pts.}]$ Decida si la siguiente equivalencia lógica es válida o no,\
+  utilizando las leyes vistas en clase y justificando paso por paso:
+  \[
+  (p \wedge  (q \to r)) \to r \wedge (p \vee s)
+  \equiv
+  \neg p \vee (q \wedge \neg r) \vee (r \wedge p) \vee (r \wedge s)
+  \]
+\item $[\frac{1}{8}\mbox{ pts.}]$ Resuelva las siguientes ecuaciones y desigualdades, indicando paso por paso las\
+  acciones que va realizando. Se sugiere fuertemente que se consulten las páginas $57$ a $59$ del\
+  libro. Escoja una ecuación de las siguientes y explique el procedimiento dentro de un párrafo.\
+  (Si alguna de las siguientes, no tiene solución real, especifique las soluciones complejas.)
+  \begin{itemize}
+  \item $36x^2 - 80x + 23 = 17x - 6$.
+  \item $\displaystyle{\sqrt{4x^2 - 28x + 49} \leq \sqrt[3]{x^{3 + \log_x 27}} + 38}$.
+  \item $\displaystyle{\frac{1 + \sin x}{\cos x} + \frac{\cos x}{1 + \sin x} = 4}$. Especifique la(s) solucion(es)\
+    exacta(s).
+  \item
+    $\left\{
+    {{
+      3x + 2x - 10 = 8y
+      \atop
+      9x + 3 = -24y + 5 - z
+   } }\atop
+      10z - 2x + 3 = 0
+    \right.$
+  \end{itemize}
+\item $[\frac{1}{10}\mbox{ pts.}]$ Escriba el sistema de ecuaciones del inciso anterior en forma matricial $AX = B$ (Busque en su libro\
+  de Álgebra Superior I o en uno de Álgebra Lineal o consúltelo con su profesor de la materia y cite\
+  su fuente.)
+\item $[\frac{1}{20}\mbox{ pts.}]$ Defina \emph{formalmente} el concepto de \emph{límite de una función real} usando $\epsilon$'s y $\delta$'s.
+\item $[\frac{1}{10}\mbox{ pts.}]$ Calcule lo siguiente, justificando paso por paso:
+  \begin{itemize}
+  \item $\lim_{x \to -2}\frac{3x^2 - 8x - 3}{2x^2 - 18}$
+  \item $\frac{d}{dx} \left[ \frac{5x^2 - \ln (\cos x)}{8x^3 - 10x} \right]$
+  \item $\int_0^1 (x^6 - 2x^3 + 5x - 3) dx$
+  \end{itemize}
+\item $[\frac{1}{10}\mbox{ pts.}]$ Enuncie los axiomas de Peano.
+\item $[\frac{1}{10}\mbox{ pts.}]$ Enuncie la paradoja de Russell.
+\item $[\frac{1}{4}\mbox{ pts.}]$ Enuncie y demuestre la siguiente proposición (para cualquier conjunto $A$):
+  \[ A \bigcap A^C = \emptyset.\]
+\item $[\frac{1}{8}\mbox{ pts.}]$ Enuncie una de las propiedades distributivas para cualesquiera tres conuntos y\
+  demuéstrela. (\textbf{NOTA}: Su prueba deberá de incluir un argumento en el que use\
+  dos contenciones de conjuntos.)
+\end{enumerate}
+
+\section*{Sugerencias}
+
+Pueden ayudarse entre varias personas para realizar los ejercicios anteriores. Sin embargo,\
+la entrega es individual.\par
+Recuerden que pueden buscar y anotar quién es el personaje que viene en la\
+primera diapositiva de dicha presentación y qué ha contribuido al mundo de la computación\
+y/o programación para ganar un punto extra.
+
+\section*{Uso de bibliografía}
+Deberán de escribir todas las fuentes bibliográficas consultadas en una bibliografía ubicada al\
+final de su documento \texttt{.tex} utilizando los comandos\\
+\verb+\begin{thebibliography}  ... \end{thebibliography}+.\par
+Por ejemplo, pueden hacer algo como lo siguiente:
+\begin{verbatim}
+\begin{thebibliography}{99}
+\bibitem{Goossens} M. Goossens; F, Mittelbach; A. Samarin.
+                     {\it The \LaTeX Companion}. Addison-Wesley. 1993.
+\bibitem{Lamport} L. Lamport. {\it \LaTeX}. Addison-Wesley. 1996.
+\end{thebibliography}
+\end{verbatim}
+para producir:
+\begin{thebibliography}{99}
+\bibitem{Goossens} M. Goossens; F, Mittelbach; A. Samarin.
+  {\it The \LaTeX Companion}. Addison-Wesley. 1993.
+\bibitem{Lamport} L. Lamport. {\it \LaTeX}. Addison-Wesley. 1996.
+\end{thebibliography}\par
+Nótese que el parámetro \texttt{99} indica el número \emph{máximo} de referencias a insertar y\
+que cada referencia va precedida por un comando \verb+\bibitem{...}+.
+
+\section*{Entrega}
+
+La entrega es por correo electrónico siguiendo los lineamientos establecidos en el documento que\
+se encuentra en la página del curso. Incluyan en el mismo cualquier comentario, inquietud\
+o dificultad al realizar la práctica.\par
+La fecha de entrega es el próximo \emph{lunes 12 de septiembre de 2016} antes de las \emph{23:59 hrs}.
+
+\end{document}
+%% Fin del cuerpo del documento

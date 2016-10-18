@@ -1,0 +1,178 @@
+%% Práctica 1 del curso de Estructuras Discretas, 2017-1
+%% Facultad de Ciencias, UNAM
+%% Profa: Laura Freidberg Gojman
+%% Ayudante: José Ricardo Rodríguez Abreu
+%% Ayudante de lab: Albert Manuel Orozco Camacho
+
+%% Author: AlOrozco53
+%% Version: 0.0
+
+%% Comienza el preámbulo del documento
+\documentclass[paper=letter, fontsize=12pt]{scrartcl}
+
+\usepackage[utf8]{inputenc} %% codificación para la inserción acentos y otros carácteres especiales
+\usepackage[T1]{fontenc} %% codificación para la impresión de acentos y otros carácteres especiales
+\usepackage[english, spanish]{babel} %% idioma del documento
+
+%% Los siguientes paquetes sirven para utilizar símbolos especiales (principalmente de matemáticas)
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+
+\usepackage{hyperref} %% paquete para manejo de hipervínculos
+\usepackage{listings} %% paquete para insertar código fuente
+
+\usepackage{sectsty} %% paquete para cambiar el estilo de encabezados de sección
+
+\parindent=5mm %% sangría
+\parskip=2mm %% espaciado
+
+%% Formato de fuentes de encabezados de secciones
+\allsectionsfont{\raggedright\large \textit\normalfont\scshape\emph}
+
+%% Título
+\title{Práctica 1}
+
+%% Subtítulo
+\subtitle{
+  Estructuras Discretas, 2017-1\\
+  Facultad de Ciencias, UNAM
+}
+
+%% Autores
+\author{
+  \normalsize
+  Laura Freidberg Gojman\\
+  \normalsize
+  \texttt{\href{mailto:lfreidberg@yahoo.com}{lfreidberg@yahoo.com}}
+  \and
+  \normalsize
+  José Ricardo Rodríguez Abreu\\
+  \normalsize
+  \texttt{\href{mailto:ricardo_rodab@ciencias.unam.mx}{ricardo\_rodab@ciencias.unam.mx}}
+  \and
+  \normalsize
+  Albert Manuel Orozco Camacho\\
+  \normalsize
+  \texttt{\href{mailto:alorozco53@ciencias.unam.mx}{alorozco53@ciencias.unam.mx}}
+}
+
+%% Fecha de hoy
+\date{\today}
+%% Fin del preámbulo del documento
+
+%% Comienza el cuerpo del documento
+\begin{document}
+
+%% Creación del título
+\maketitle
+
+\section*{Objetivo de la práctica}
+
+\noindent
+El alumno aprenderá a identificar las herramientas básicas que \LaTeX{} provee para dar\
+formato a un documento, comenzando con la primera página. El alumno, además, aprenderá\
+a manejar dichas herramients al utilizarlas para crear una plantilla (formato) de entrega\
+de tareas.
+
+\section*{Preámbulo}
+
+\noindent
+Para usar cualquier procesador de texto, es de vital importancia conocer las formas en que\
+podemos modificar un documento a nuestra conveniencia. En el caso de \LaTeX, estas formas\
+se reducen a importar paquetes y utilizar comandos, en la mayoría de los casos.\par
+Debido a que \LaTeX{} contiene una enorme cantidad de clases, paquetes y comandos, es imposible\
+presentarlos todos en un libro (como el que está en la página del curso) o en notas. Por\
+ello, es importante familiarizarse con los diferentes sitios web que proveen ayuda instantánea\
+tan solo con hacer una búsqueda en Google.
+
+\section*{Actividades a realizar}
+
+\noindent
+Utilizando lo visto en clase (presentación y libro de consulta), deberán diseñar y elaborar un\
+formato de entrega de tareas (plantilla) que deberá incluir lo siguiente:
+\begin{itemize}
+\item datos de la universidad y de la facultad
+\item datos de la asignatura
+\item título del documento
+\item subtítulo (opcional)
+\item nombre de los profesores (opcional)
+\item nombre del alumno y número de cuenta
+\item fecha de entrega del documento
+\item formato de párrafos
+\item formato de título de secciones
+\item índice (opcional)
+\item numeración de página
+\item pie de página (opcional)
+\end{itemize}\par
+\emph{
+  Observación: con \textbf{tarea} no se hace referencia a las demás tareas que se entregarán\
+  en el curso (teóricas), sino a las prácticas en \LaTeX{} y los archivos README de las prácticas\
+  en Haskell.
+}\par
+La plantilla deberá de contener todos los datos principales del documento en una \textbf{portada}
+que estará al principio y aparte del resto del documento.\par
+Para ilustrar el formato que le darán al cuerpo del documento, deberán realizar lo siguiente:
+\begin{enumerate}
+\item Escribir qué es un fractal.
+\item Escribir cuatro situaciones del ``mundo real'' en las que aparece\
+  la sucesión de Fibonacci.
+\item Escribir qué tienen en común los fractales y la sucesión de fibonacci.
+\item Escribir una lista de las distribuciones de Linux más importantes, mostrando una\
+  jerarquía de distros \textit{distros}. Como referencia, pueden consultar\
+  \texttt{\href{https://en.wikipedia.org/wiki/List_of_Linux_distributions}{este enlace}}\
+  (¡mas no pueden citar directamente de ahí ya que es Wikipedia!).
+\item Escribir un comentario y una reseña sobre alguno de los videos en los siguientes enlaces:
+  \begin{itemize}
+  \item \texttt{\href{https://www.youtube.com/watch?v=dNRDvLACg5Q}{Explicación informal sobre máquinas de Turing}}\
+    (disponible sólo en inglés y sin subtítulos)
+  \item \texttt{\href{https://www.youtube.com/watch?v=ONs_qejnD8c}{¿Se nos acabarán algún día los nombres?}}\
+    (disponible en inglés y con subtítulos en español)
+  \end{itemize}
+\end{enumerate}\par
+Deberán de escribir todas las fuentes bibliográficas consultadas en una bibliografía ubicada al\
+final de su documento \texttt{.tex} utilizando los comandos\\
+\verb+\begin{thebibliography}  ... \end{thebibliography}+.\par
+Por ejemplo, pueden hacer algo como lo siguiente:
+\begin{verbatim}
+\begin{thebibliography}{99}
+\bibitem{Goossens} M. Goossens; F, Mittelbach; A. Samarin.
+                     {\it The \LaTeX Companion}. Addison-Wesley. 1993.
+\bibitem{Lamport} L. Lamport. {\it \LaTeX}. Addison-Wesley. 1996.
+\end{thebibliography}
+\end{verbatim}
+para producir:
+\begin{thebibliography}{99}
+\bibitem{Goossens} M. Goossens; F, Mittelbach; A. Samarin.
+  {\it The \LaTeX Companion}. Addison-Wesley. 1993.
+\bibitem{Lamport} L. Lamport. {\it \LaTeX}. Addison-Wesley. 1996.
+\end{thebibliography}\par
+Nótese que el parámetro \texttt{99} indica el número \emph{máximo} de referencias a insertar y\
+que cada referencia va precedida por un comando \verb+\bibitem{...}+.
+
+\section*{Sugerencias}
+
+\noindent
+Para la realización de la plantilla, pueden consultar ejemplos como los siguientes:
+\begin{itemize}
+\item \texttt{\href{https://www.overleaf.com/gallery/tagged/homework\#.V7pPbGXMzFI}
+  {plantillas en overleaf.com}}
+\item \texttt{\href{https://www.dropbox.com/s/cxenfopmt9qzfk1/assignment_3.tex?dl=0}
+  {una plantilla que uso para mis tareas}}
+\end{itemize}\par
+Revisen el libro que está en la página del curso y las diapositivas que les (intenté) presentar\
+el pasado viernes. Recuerden que pueden buscar y anotar quién es el personaje que viene en la\
+primera diapositiva de dicha presentación y qué ha contribuido al mundo de la computación\
+y/o programación para ganar un punto extra.
+
+\section*{Entrega}
+
+La entrega es por correo electrónico siguiendo los lineamientos establecidos en el documento que\
+se encuentra en la página del curso. Incluyan en el mismo cualquier comentario, inquietud\
+o dificultad al realizar la práctica.\par
+La fecha de entrega es el próximo \emph{domingo 21 de agosto de 2016} antes de las \emph{23:59 hrs}.
+
+\end{document}
+%% Fin del cuerpo del documento

@@ -1,0 +1,105 @@
+\documentclass[paper=letter, fontsize=12pt]{scrartcl}
+\usepackage{amsmath, amssymb, latexsym}
+\usepackage{anyfontsize}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\begin{document}
+\parindent=0mm:
+	\begin{center}
+  Estructuras Discretas 2017-1\\
+  Tarea 5\\
+\end{center}
+
+Alumno: Luis Alberto Martinez Monroy\\
+N cuenta: 314212391\\ \\
+
+{\bf 1.- Establezca la validez de los sigueintes argumentos usando sólo las principales reglas de inferencia y especificando que regla se usa en cada paso (*)}\\
+
+a)$(p\wedge (p\rightarrow q)\wedge (\neg q \vee r))\rightarrow r$
+\begin{enumerate}
+	\item$(p\wedge (p\rightarrow q)\wedge (\neg q \vee r)$ PREMISA
+	\item$p \wedge (p\rightarrow q)$ $Por E\wedge  (1)$
+	\item$(\neg q \vee r)$ $Por E\wedge  (1)$
+	\item$p $$Por E\wedge  (2)$
+	\item$(p\rightarrow q)$ $Por E\wedge  (2)$
+	\item$q$ $Por MP (4)y(5)$
+	\item$r$ $Por SD (3)y(6)$
+\end{enumerate}
+
+b)$p\wedge q, p\rightarrow (r\wedge q), r\rightarrow (s\vee t), \neg s \therefore t $\\
+\begin{enumerate}
+	\item$p\wedge q$ PREMISA
+	\item$p\rightarrow (r\wedge q)$ PREMISA
+	\item$r\rightarrow (s\vee t)$ PREMISA
+	\item$\neg s$ PREMISA
+	\item$p $ $Por E\wedge (1)$
+	\item$(r\wedge q)$ Por MP (1) y (5)
+	\item$r$ $Por E\wedge (6)$
+	\item$(s\vee t)$ Por MP (3) y (7)
+	\item$t$ Por SD (4) y (8)
+\end{enumerate}
+
+c)$p\rightarrow (q\rightarrow r), \neg q \rightarrow \neg p, p \therefore r {\bf(**)}$
+\begin{enumerate}
+	\item$p\rightarrow (p\rightarrow r)$ PREMISA
+	\item$\neg q \rightarrow \neg p$ PREMISA
+	\item$P$ PREMISA
+	\item$(q\rightarrow r)$ Por MP (1) y (3)
+	\item$\neg p \vee r$ Por Inferencia especial (**) (2) y (4)
+	\item$r$ Por SD (3) y (5)	
+\end{enumerate}
+(**)= $A\rightarrow B, \neg A \rightarrow C / B\vee C$\\
+
+d)$p\wedge q, r, p\wedge r\rightarrow s \therefore s$\\
+\begin{enumerate}
+	\item$p\wedge q$ PREMISA
+	\item$r$ PREMISA
+	\item$p\wedge r\rightarrow s$ PREMISA
+	\item$p $ $Por E\wedge (3)$
+	\item$r\rightarrow s$ $Por E\wedge (3)$
+	\item$s$ Por MP (2) y (5)
+\end{enumerate}
+
+e)$p\vee(\neg q \wedge s)\rightarrow s, t, (s\wedge t)\rightarrow u, u\rightarrow \neg w, (\neg p \wedge \neg s)\rightarrow (l \vee \neg k), i \rightarrow (\neg l \wedge k), w \therefore \neg i$\\
+\begin{enumerate}
+	\item$p\vee(\neg q \wedge s)\rightarrow s$ PREMISA
+	\item$t$ PREMISA
+	\item$(s\wedge t)\rightarrow u$ PREMISA
+	\item$u\rightarrow \neg w$ PREMISA
+	\item$(\neg p \wedge \neg s)\rightarrow (l \vee \neg k)$ PREMISA
+	\item$i \rightarrow (\neg l \wedge k)$ PREMISA
+	\item$w$ PREMISA
+	\item$(s\wedge t)\rightarrow \neg w$ Por SH (3) Y (4)
+	\item$\neg (s\wedge t)\equiv \neg s \vee \neg t$ Por MT (7) y (8) y equivalente por ley de morgan
+	\item$\neg s$ Por SD (9) y (2)
+	\item$\neg(p \vee \neg(q \wedge s)) \equiv \neg p \wedge \neg (\neg q \wedge s)$ Por MT (1) y (10) y equivalencia por ley de morgan
+	\item$\neg p$ Por E$\wedge$ de (11)
+	\item$\neg p \wedge \neg s$ Por I$\wedge$ de (12) y (10)
+	\item$(l\vee \neg k)\equiv (\neg \neg l \vee \neg k)\equiv \neg(\neg l \wedge k)$ Por MP (13) y (5)
+	\item$\neg i$ Por MT (14) y (6)
+\end{enumerate}
+
+{\bf 2.- Demostrar las siguientes propiedades:}\\
+a) sea $\Gamma$, $\phi$ un conjunto de formulas y $P$ una expresión lógica, demuestre que si $\Gamma \models P$ y $\Gamma \subseteq \phi$ entonces $\phi \models P$.\\
+
+$\Gamma \models P,\Gamma \subseteq \phi \therefore \phi \models P $\\
+
+Tenemos que la premisa $\Gamma \models P$, y sabemos que hay una propiedad de consecuencia lógica que dice que $A \in \Gamma \rightarrow \Gamma \models A$.\\
+Por lo que podemos decir que es necesario $\Gamma \models P$ para $P\in \Gamma$.\\
+Si supodemos que $\Gamma \models P$ es cierta, necesariamente $P\in \Gamma$ es cierta.\\
+
+Tenemos que la premisa $\Gamma \subseteq \phi$, dado que $\Gamma y \phi$ es un conjunto de formulas, podemos interpretar que $\Gamma \subseteq \phi$ nos dice que para el conjunto de formulas $\phi$, $\Gamma$ es un elemento, lo que quiere decir que $\Gamma$ es subconjunto de $\phi$.\\
+
+Sabemos que $\phi=\{\{\Gamma \}\}$\\
+Sabemos que $P\in \Gamma$\\
+Sabemos que $\Gamma=\{P_{0}\wedge...\wedge P\}$\\
+Por lo que podemos deducir que$ \phi=\{\{P_{0}\wedge...\wedge P \}\} $\\
+y  deducimos $\Gamma \in phi$, por lo tanto $P \in \phi$.\\
+Por ultimo concluimos que como $P\in \phi, \phi \models P$\\
+
+b) Sea $\Gamma$, $\phi$, $\Delta$ un conjunto de fórmulas, demuestre que: Si $\Gamma \models \phi$ y $\phi \models \Delta$ entonces $\Gamma \models \Delta$\\
+
+Ya sabemos que para que se cumpla $\Gamma \models A$, es necesario $A \in \Gamma$, por lo que sustituimos y a $A$ por $\phi $ y nos queda que $\phi \in \Gamma$.\\Aplicamos la misma formula $A$ $\in$ $\Gamma$ y cambiamos $A$ por $\Delta$ y $\Gamma$ por $\phi$, lo que nos queda $\Delta \in \phi$. Ya sabiendo esto podemos decir que 
+al ser $\Delta$ un elemento de $\phi$ y $\phi$ un elemento de $\Gamma$, podemos deducir que $\Delta \in \Gamma$.\\
+Por lo que concluimos que al ser $\Delta$ un elemento de $\Gamma$, $\Gamma \models \Delta$
+\end{document}

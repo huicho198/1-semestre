@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{forest}
+\usepackage{amsmath}
+\usepackage{MnSymbol}
+\usepackage{wasysym}
+\begin{document}
+
+\begin{forest}
+  for tree= {square,draw, 1 sep=20pt}
+  [S,blue
+    []
+    [E
+      [o]
+      [E
+        [(]
+        [E
+          [o]
+          [E
+            [(]
+            [E
+              [E
+                []
+              ]
+              [Triangulo]
+            ]
+            [)]
+          ]
+          [o]
+        ]
+        [)]
+      ]
+      [o]
+    ]
+  ]
+\end{forest}
+
+\end{document}
