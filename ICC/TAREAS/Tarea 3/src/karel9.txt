@@ -1,0 +1,29 @@
+class program {
+void turnright(){
+iterate(3){turnleft();}
+}
+    program () {
+    iterate(19){
+    while(frontIsClear){
+    putbeeper();
+    move();
+    }
+    
+    while(frontIsBlocked){
+    putbeeper();
+    turnleft();
+    }
+    
+    while(rightIsBlocked){
+    move();}
+    turnright();
+    move();
+    
+    } 
+    putbeeper();
+    turnleft();
+    turnoff();
+    }
+    
+    
+}

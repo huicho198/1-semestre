@@ -1,0 +1,80 @@
+1.-¿cuantos tipos de datos hay para representar numeros enteros?
+
+long
+int
+short
+byte
+
+2.-¿cual es el objetivo de una declaracion?
+Asignarle el nombre a un tipo de dato, este puede ser variable o constante.
+En tdoo programa es necesario especificar de antemano los datos con los que se va atrabajar, para que el compilador reserve espacio  para cada uno de ellos y para que se puedan manipular en el programa. esta especificacion se conoce como declaracion.
+
+3.-Si se tiene una declaracion final int UNO = 1; ¿Es posible tener la siguiente intruccion?
+int negativo = -UNO
+
+si se puede porse solo se esta usando a negativo como un identificador y no como una operacion.
+
+4.-Indica tres formas de incrementar en uno una variable
+int num = 1;
+num += 1;
+num = num + 1;
+num++; //pos incremento
+++num; // pre incremento.
+
+5.-Es correcta la sigueinte linea de cdigo?¿porque=
+int posicion // indica la posicion del objeto;
+
+6.-¿existe una diferencia entre tener bancario y "bancario"?
+
+
+7.- cuales de las siguientes cadenas si pueden ser identificadores en java
+
+java.awt.graphics //NO
+rayos-x //NO
+_123 //SI
+valor calculado //NO
+valorCalculado//SI
+void // NO
+Void //NO
+2dias //SI
+segundabase //SI
+x //si
+
+
+8.-es verdadero o falso que en java 1/3 es distinto de 1.0/3.0?
+si es verdadero, es distinto
+¿porque?
+el primero  esta diviendo en enteros y el segundo esta dividiendo en flotantes
+
+9.- ¿cuando es verdadera la siguiente instruccion?
+(a/b)* b +(a%b) === a//< > == <= >=
+
+
+10.- Definir constantes ovariables de los siguientes datos
+
+
+
+11.- Escribir expreciones logicas
+
+a es mayor que b y que c
+a > b && a > c
+
+a y b son ambas negativas
+
+a == false && b == false // ----> true
+
+ni a ni b son negativas
+
+a == true && b == true
+
+a es igual a b per a diferente de c
+
+a== b && a != c
+
+tanto a como b y ce son iguales 
+a== b && b == c && a == c
+
+
+
+
+

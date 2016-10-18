@@ -1,0 +1,6 @@
+ x = int(raw_input())
+ int(y) = x%2
+>>>	if y=1:
+print(es primo)
+ elif y=0:
+print(es par)

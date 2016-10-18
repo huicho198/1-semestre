@@ -1,0 +1,45 @@
+¿Cuáles son los componentes de una clase?
+
+-atributos
+-métodos
+-constructor
+
+¿Cuál es la visibilidad más frecuente de un atributo? ¿ y la de un método?
+
+-private atributo
+-public metodo
+
+Por la encapsulación 
+
+¿Cuáles son los datos con los que pude trabajar un método?
+
+todos los primitivos
+-int
+-float
+-boolean
+-char
+
+y objetos
+-String
+
+
+¿Qué es un método constructor?
+
+-Permite crear instancias de una Clase
+
+¿Qué significa que un método este sobrecargado?
+
+Es aquel cuya definición se repite en la clase, pero tiene diferente longitud de parametros.
+Con definicion nos referimos a mismo identificador o nombre de método.
+
+¿Cuándo se utiliza la palabra reservada this?
+
+Para referirnos a los atributos y métodos del objeto con el que
+estamos trabajando.
+
+¿Que debe hacerce paraque un método pueda devolver un objeto?
+
+
+
+
+

@@ -1,0 +1,69 @@
+class program{
+	void turnright(){
+		iterate(3){
+			turnleft();
+		}
+	}
+	void recoger(){
+		while(nextToABeeper){
+			pickbeeper();
+		}
+	}
+	void  avanzar(){
+		while(frontIsClear){
+			move();
+		}
+	}
+	void dejar(){
+		while(anyBeepersInBeeperBag){
+			putbeeper();
+		}
+		turnoff();
+	}
+	program(){
+		while(frontIsClear || frontIsBlocked){
+			while(frontIsClear){
+				if(nextToABeeper){
+					recoger();
+					move();
+				}
+				else{
+					move();
+				}
+			}
+			
+			if(frontIsBlocked && facingNorth ){
+				if(rightIsClear){
+					 recoger();
+					turnright();
+					move();
+					turnright();
+				}
+				if(rightIsBlocked){
+					recoger();
+					turnleft();
+					avanzar();
+					turnleft();
+					avanzar();
+					dejar();
+				}
+			}
+			if(frontIsBlocked && facingSouth ){
+				if(leftIsClear){
+					 recoger();
+					turnleft();
+					move();
+					turnleft();
+				}
+				if(leftIsBlocked){
+					recoger();
+					turnright();
+					avanzar();
+					dejar();
+				}
+			}
+			
+			
+		}
+	}
+}

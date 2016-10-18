@@ -1,0 +1,66 @@
+class program {
+void planta(){
+iterate(4){
+        iterate(5){
+        putbeeper();}
+        move();
+        }
+        }
+void plantar(){
+iterate(5){
+putbeeper();}
+}
+
+void turnright(){
+iterate(3){
+turnleft();
+}
+}
+
+
+    program () {
+    
+       planta();
+       plantar();
+       turnright();
+       move();
+       turnright();
+       
+       planta();
+       plantar();
+       turnleft();
+       move();
+       
+       turnleft();
+       planta();
+       plantar();
+       turnright();
+       move();
+       turnright();
+       
+       planta();
+       plantar();
+       turnleft();
+       move();
+       
+       
+        turnleft();
+       planta();
+       plantar();
+       turnright();
+       move();
+       turnright();
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        
+        
+        turnoff();
+    }
+}
